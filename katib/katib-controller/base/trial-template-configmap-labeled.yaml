@@ -67,7 +67,7 @@ data:
             containers:
               - name: pytorch
                 image: gcr.io/kubeflow-ci/pytorch-dist-mnist-test:v1.0
-                imagePullPolicy: Always
+                imagePullPolicy: IfNotPresent
                 command:
                   - "python"
                   - "/var/mnist.py"
@@ -84,7 +84,7 @@ data:
             containers:
               - name: pytorch
                 image: gcr.io/kubeflow-ci/pytorch-dist-mnist-test:v1.0
-                imagePullPolicy: Always
+                imagePullPolicy: IfNotPresent
                 command:
                   - "python"
                   - "/var/mnist.py"

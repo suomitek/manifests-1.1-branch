@@ -55,7 +55,7 @@ spec:
         - name: USERID_PREFIX
           value: 'accounts.google.com:'
         image: gcr.io/kubeflow-images-public/jupyter-web-app:v1.1.0-gd3377cbd
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: jupyter-web-app
         ports:
         - containerPort: 5000

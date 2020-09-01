@@ -533,7 +533,7 @@ spec:
         - name: CONFIG_CONNECTOR_VERSION
           value: 1.15.1
         image: gcr.io/cnrm-eap/recorder:b59b871
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: recorder
         readinessProbe:
           exec:
@@ -592,7 +592,7 @@ spec:
             fieldRef:
               fieldPath: metadata.namespace
         image: gcr.io/cnrm-eap/webhook:b59b871
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: webhook
         readinessProbe:
           exec:
@@ -646,7 +646,7 @@ spec:
         command:
         - /configconnector/manager
         image: gcr.io/cnrm-eap/controller:b59b871
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: manager
         readinessProbe:
           exec:
@@ -699,7 +699,7 @@ spec:
         command:
         - /configconnector/deletiondefender
         image: gcr.io/cnrm-eap/deletiondefender:b59b871
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: deletiondefender
         readinessProbe:
           exec:

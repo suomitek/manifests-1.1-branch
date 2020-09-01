@@ -71,7 +71,7 @@ spec:
             - name: registration-dir
               mountPath: /registration
         - name: liveness-probe
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           image: quay.io/k8scsi/livenessprobe:v1.1.0
           args:
             - --csi-address=/csi/csi.sock
